@@ -37,7 +37,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-@st.cache_data
 def build_self_contained_html():
     """
     Bundles HTML, CSS, JavaScript, and asset images into a single self-contained HTML payload.
@@ -74,22 +73,26 @@ def build_self_contained_html():
 
     html = re.sub(r'<script\s+src=["\']([^"\']+\.js)["\']\s*></script>', inline_js, html)
 
-    # 3. Inline images as base64 data URIs
+    # 3. Inline images as base64 data URIs (both HTML src and JavaScript strings)
     def inline_images(match):
-        img_rel = match.group(1)
-        img_full = os.path.join(base_dir, img_rel)
+        prefix = match.group(1)
+        img_rel = match.group(2)
+        suffix = match.group(3)
+        img_full = os.path.join(base_dir, img_rel.replace('/', os.sep))
         if os.path.exists(img_full) and os.path.isfile(img_full):
             ext = os.path.splitext(img_full)[1].lower().replace('.', '')
             mime = "image/jpeg" if ext in ["jpg", "jpeg"] else f"image/{ext}"
             try:
                 with open(img_full, "rb") as imf:
                     b64 = base64.b64encode(imf.read()).decode("utf-8")
-                    return f'src="data:{mime};base64,{b64}"'
+                    return f'{prefix}data:{mime};base64,{b64}{suffix}'
             except Exception:
                 return match.group(0)
         return match.group(0)
 
-    html = re.sub(r'src=["\']([^"\']+\.(?:jpg|jpeg|png|webp|svg))["\']', inline_images, html)
+    # Replaces src="..." as well as "assets/..." in JavaScript configurations
+    html = re.sub(r'(src=["\'])([^"\']+\.(?:jpg|jpeg|png|webp|svg))(["\'])', inline_images, html)
+    html = re.sub(r'([\"\'])(assets/[^"\']+\.(?:jpg|jpeg|png|webp|svg))([\"\'])', inline_images, html)
 
     return html
 

@@ -22,11 +22,11 @@ const portfolioData = {
     tagline: "Exploring the frontiers of Artificial Intelligence, algorithms, and real-world software engineering.",
     shortBio: "I am a passionate Computer Science student interested in Artificial Intelligence, programming, problem solving, and learning new technologies.",
     fullBio: "Currently pursuing Bachelor of Engineering in Computer Science with a specialization in General AI at Chandigarh University. Passionate about understanding deep learning architectures, building algorithmic solutions, and translating complex machine learning concepts into impactful software.",
-    
+
     // Profile Photo (Can be updated by replacing assets/images/profile.jpg or setting your own path)
-    profilePhoto: "assets/images/profile.jpg",
+    profilePhoto: "assets/images/krishna_photo.png",
     profilePhotoAlt: "Krishna Verma - Portfolio Photo",
-    
+
     // Status Badge
     status: {
       available: true,
@@ -47,7 +47,7 @@ const portfolioData = {
     institution: "Chandigarh University",
     currentYear: "[Add Current Year]",        // Placeholder
     section: "[Add Section]",                 // Placeholder
-    
+
     // Academic Performance Card (Easily editable marks/grades)
     performance: {
       currentCGPA: "[CGPA]",                 // Placeholder: e.g., "8.8 / 10"
@@ -275,7 +275,7 @@ const portfolioData = {
     email: "[EMAIL]",               // Placeholder: e.g., "krishna.verma.cse@gmail.com"
     phone: "[PHONE NUMBER]",        // Optional placeholder
     location: "Chandigarh University, Punjab, India",
-    
+
     // Social Profiles
     socials: {
       github: {

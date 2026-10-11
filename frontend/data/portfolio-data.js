@@ -24,7 +24,7 @@ const portfolioData = {
     fullBio: "Currently pursuing Bachelor of Engineering in Computer Science with a specialization in General AI at Chandigarh University. Passionate about understanding deep learning architectures, building algorithmic solutions, and translating complex machine learning concepts into impactful software.",
     
     // Profile Photo (Can be updated by replacing assets/images/profile.jpg or setting your own path)
-    profilePhoto: "assets/images/profile.jpg",
+    profilePhoto: "assets/images/krishna_photo.png",
     profilePhotoAlt: "Krishna Verma - Portfolio Photo",
     
     // Status Badge
