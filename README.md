@@ -125,3 +125,31 @@ All details are in `frontend/data/portfolio-data.js`:
    - `contact.socials.github.url`: update with your GitHub URL.
    - `contact.socials.linkedin.url`: update with your LinkedIn URL.
 3. Save the file and refresh your browser!
+
+---
+130: 
+131: ## 🌐 Posting to GitHub & Free Live Hosting
+132: 
+133: Your repository is already initialized with Git on the `main` branch. Follow these steps to publish it to your GitHub account:
+134: 
+135: ### 1. Push to your GitHub Repository:
+136: 1. Go to [GitHub.com/new](https://github.com/new) and create a new repository named `krishna-portfolio` (or `portfolio`).
+137: 2. Link your remote and push by running:
+138:    ```bash
+139:    git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>.git
+140:    git branch -M main
+141:    git push -u origin main
+142:    ```
+143: 
+144: ### 2. Enable Free GitHub Pages Hosting:
+145: 1. On GitHub, go to your repository **Settings** -> **Pages**.
+146: 2. Under **Build and deployment**, select **Source** as `Deploy from a branch`.
+147: 3. Choose the `main` branch and `/ (root)` folder, then click **Save**.
+148: 4. In 1–2 minutes, your website will be live at:
+149:    `https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPO_NAME>/`
+150: 
+151: ### 3. Deploy to Other Platforms:
+152: - **Vercel**: Import the GitHub repository at [vercel.com](https://vercel.com) for instant global edge deployment.
+153: - **Surge.sh**: Run `npx surge .` inside the project folder for zero-setup 10-second deployment.
+154: - **Streamlit Community Cloud**: If embedding within a Streamlit app (`streamlit.components.v1.html`), you can deploy via [share.streamlit.io](https://share.streamlit.io).
+
