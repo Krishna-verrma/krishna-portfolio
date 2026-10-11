@@ -19,9 +19,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve frontend static files
-const frontendPath = path.join(__dirname, '..', 'frontend');
-app.use(express.static(frontendPath));
+// Serve frontend static files (prefers root, falls back to frontend/)
+const publicPath = fs.existsSync(path.join(__dirname, '..', 'index.html')) 
+  ? path.join(__dirname, '..') 
+  : path.join(__dirname, '..', 'frontend');
+app.use(express.static(publicPath));
 
 // Data file for saving incoming messages
 const MESSAGES_FILE = path.join(__dirname, 'messages.json');
@@ -93,9 +95,9 @@ app.post('/api/contact', (req, res) => {
   });
 });
 
-// Fallback to frontend index.html for client routing
+// Fallback to index.html for client routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(frontendPath, 'index.html'));
+  res.sendFile(path.join(publicPath, 'index.html'));
 });
 
 // Start Server
