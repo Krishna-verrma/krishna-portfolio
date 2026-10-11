@@ -52,6 +52,8 @@
         <a href="#achievements" class="nav-link">Achievements</a>
         <a href="#goals" class="nav-link">Goals</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#coa" class="nav-link">COA Assignment</a>
+        <a href="#converter" class="nav-link">Number Converter</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
@@ -86,6 +88,8 @@
     <a href="#achievements" class="mobile-nav-link"><span>Achievements</span><i class="ph ph-arrow-right"></i></a>
     <a href="#goals" class="mobile-nav-link"><span>Goals</span><i class="ph ph-arrow-right"></i></a>
     <a href="#projects" class="mobile-nav-link"><span>Projects</span><i class="ph ph-arrow-right"></i></a>
+    <a href="#coa" class="mobile-nav-link"><span>COA Assignment</span><i class="ph ph-arrow-right"></i></a>
+    <a href="#converter" class="mobile-nav-link"><span>Number Converter</span><i class="ph ph-arrow-right"></i></a>
     <a href="#contact" class="mobile-nav-link"><span>Contact</span><i class="ph ph-arrow-right"></i></a>
   </aside>
 
@@ -183,7 +187,35 @@
       </div>
     </section>
 
-    <!-- 8. CONTACT SECTION -->
+    <!-- 8. COA ASSIGNMENT SECTION -->
+    <section id="coa" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ph ph-file-doc"></i> Academic Submission</span>
+          <h2 class="section-title">COA Assignment</h2>
+          <p class="section-subtitle">Computer Organization & Architecture coursework submission, Word document (.docx) download, and interactive document manager.</p>
+        </div>
+        <div id="coa-container">
+          <!-- Rendered dynamically by components/coa.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. COA NUMBER CONVERTER SECTION -->
+    <section id="converter" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="ph ph-cpu"></i> Architecture Tools</span>
+          <h2 class="section-title">Number System Converter</h2>
+          <p class="section-subtitle">Real-time COA utility: live base conversion between Decimal, Binary, Hexadecimal, and Octal with interactive register bit switches.</p>
+        </div>
+        <div id="converter-container">
+          <!-- Rendered dynamically by components/converter.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. CONTACT SECTION -->
     <section id="contact" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -233,6 +265,8 @@
   <script src="components/achievements.js"></script>
   <script src="components/goals.js"></script>
   <script src="components/projects.js"></script>
+  <script src="components/coa.js"></script>
+  <script src="components/converter.js"></script>
   <script src="components/contact.js"></script>
 
   <!-- 3. Main Controller -->

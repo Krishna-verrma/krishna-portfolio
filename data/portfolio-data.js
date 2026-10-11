@@ -33,26 +33,26 @@ const portfolioData = {
       text: "Open to Learning & Collaborations"
     },
 
-    // Quick Academic & Location Info (Easily replace placeholders)
+    // Quick Academic & Location Info
     course: "BE CSE – General AI",
     university: "Chandigarh University",
-    section: "[Add Section]",               // Placeholder: e.g., "AI-04" or "Section B"
-    academicYear: "[Add Current Year]",       // Placeholder: e.g., "2nd Year / 4th Sem"
-    location: "[Add Location]",               // Placeholder: e.g., "Punjab, India"
+    section: "25BAI-601",
+    academicYear: "2nd Year",
+    location: "Mohali, Punjab, India",
   },
 
   // Academic Details & Performance
   academics: {
     degree: "Bachelor of Engineering in Computer Science (General AI)",
     institution: "Chandigarh University",
-    currentYear: "[Add Current Year]",        // Placeholder
-    section: "[Add Section]",                 // Placeholder
+    currentYear: "2nd",        // Placeholder
+    section: "25BAI-601",                 // Placeholder
 
     // Academic Performance Card (Easily editable marks/grades)
     performance: {
-      currentCGPA: "[CGPA]",                 // Placeholder: e.g., "8.8 / 10"
-      grade12: "[Marks / Percentage]",       // Placeholder: e.g., "89%"
-      grade10: "[Marks / Percentage]",       // Placeholder: e.g., "92%"
+      currentCGPA: "7.5",                 // Placeholder: e.g., "8.8 / 10"
+      grade12: "77%",       // Placeholder: e.g., "89%"
+      grade10: "75%",       // Placeholder: e.g., "92%"
       status: "In Good Academic Standing",
       highlights: [
         "Specializing in Artificial Intelligence and Neural Networks",
@@ -69,23 +69,23 @@ const portfolioData = {
         institution: "Chandigarh University",
         duration: "2024 – Present",
         details: "Core subjects: Data Structures, Computer Organization, Object-Oriented Programming, AI Foundations, Python & C++ Programming.",
-        grade: "CGPA: [CGPA]"
+        grade: "CGPA: 7.5"
       },
       {
         level: "Senior Secondary (12th Grade)",
         title: "Higher Secondary Certificate (PCM)",
-        institution: "[Add School Name]",
-        duration: "[Add Year]",
+        institution: "DAV",
+        duration: "2025",
         details: "Focus on Physics, Chemistry, and Mathematics with Computer Science foundation.",
-        grade: "Score: [Marks]"
+        grade: "Score: 77%"
       },
       {
         level: "Secondary School (10th Grade)",
         title: "Secondary School Examination",
-        institution: "[Add School Name]",
-        duration: "[Add Year]",
+        institution: "DAV",
+        duration: "2023",
         details: "Comprehensive academic foundation across Science, Mathematics, and Languages.",
-        grade: "Score: [Marks]"
+        grade: "Score: 75%"
       }
     ]
   },
@@ -272,31 +272,51 @@ const portfolioData = {
 
   // Contact Information & Social Profiles
   contact: {
-    email: "[EMAIL]",               // Placeholder: e.g., "krishna.verma.cse@gmail.com"
-    phone: "[PHONE NUMBER]",        // Optional placeholder
+    email: "krishnavermaam213@gmail.com",               // Placeholder: e.g., "krishna.verma.cse@gmail.com"
+    phone: "8171420041",        // Optional placeholder
     location: "Chandigarh University, Punjab, India",
 
     // Social Profiles
     socials: {
       github: {
         name: "GitHub",
-        url: "[GITHUB LINK]",       // Placeholder: e.g., "https://github.com/krishna-verma"
+        url: "https://github.com/Krishna-verrma",
         icon: "ph-github-logo",
-        handle: "@krishna-verma"
+        handle: "@Krishna-verrma"
       },
       linkedin: {
         name: "LinkedIn",
-        url: "[LINKEDIN LINK]",     // Placeholder: e.g., "https://linkedin.com/in/krishna-verma"
+        url: "https://www.linkedin.com/in/krishna-verma-890214367/?isSelfProfile=true",
         icon: "ph-linkedin-logo",
-        handle: "in/krishna-verma"
+        handle: "Krishna Verma"
       },
       instagram: {
         name: "Instagram",
-        url: "[INSTAGRAM LINK]",   // Placeholder: e.g., "https://instagram.com/krishna_verma"
+        url: "https://instagram.com/krisshnaa_vermaa",
         icon: "ph-instagram-logo",
-        handle: "@krishna_verma"
+        handle: "@krisshnaa_vermaa"
       }
     }
+  },
+
+  // COA Assignment Configuration
+  coaAssignment: {
+    course: "Computer Organization & Architecture (COA)",
+    courseCode: "25BAI-601",
+    assignmentTitle: "COA Assignment: Number Systems & Computer Architecture",
+    description: "Official coursework assignment on number system conversions (Binary, Hexadecimal, Octal, Decimal), two's complement arithmetic, instruction format, and memory addressing.",
+    defaultFileName: "COA_Assignment_Krishna_Verma.docx",
+    defaultFilePath: "assets/assignments/COA_Assignment_Krishna_Verma.docx",
+    academicYear: "2nd Year",
+    semester: "Semester 2 (2025)",
+    submissionStatus: "Available for Download",
+    fileSize: "1.2 MB",
+    topics: [
+      "Binary, Decimal, Octal & Hexadecimal Base Conversions",
+      "Sign-Magnitude, 1's Complement & 2's Complement",
+      "Fixed-Point & Floating-Point Data Representations",
+      "Basic CPU Register Organization & Bus Structure"
+    ]
   },
 
   // Footer metadata

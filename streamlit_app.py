@@ -73,26 +73,35 @@ def build_self_contained_html():
 
     html = re.sub(r'<script\s+src=["\']([^"\']+\.js)["\']\s*></script>', inline_js, html)
 
-    # 3. Inline images as base64 data URIs (both HTML src and JavaScript strings)
-    def inline_images(match):
+    # 3. Inline assets (images, documents) as base64 data URIs
+    def inline_assets(match):
         prefix = match.group(1)
-        img_rel = match.group(2)
+        asset_rel = match.group(2)
         suffix = match.group(3)
-        img_full = os.path.join(base_dir, img_rel.replace('/', os.sep))
-        if os.path.exists(img_full) and os.path.isfile(img_full):
-            ext = os.path.splitext(img_full)[1].lower().replace('.', '')
-            mime = "image/jpeg" if ext in ["jpg", "jpeg"] else f"image/{ext}"
+        asset_full = os.path.join(base_dir, asset_rel.replace('/', os.sep))
+        if os.path.exists(asset_full) and os.path.isfile(asset_full):
+            ext = os.path.splitext(asset_full)[1].lower().replace('.', '')
+            if ext in ["jpg", "jpeg"]:
+                mime = "image/jpeg"
+            elif ext == "docx":
+                mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            elif ext == "doc":
+                mime = "application/msword"
+            elif ext == "pdf":
+                mime = "application/pdf"
+            else:
+                mime = f"image/{ext}"
             try:
-                with open(img_full, "rb") as imf:
-                    b64 = base64.b64encode(imf.read()).decode("utf-8")
+                with open(asset_full, "rb") as af:
+                    b64 = base64.b64encode(af.read()).decode("utf-8")
                     return f'{prefix}data:{mime};base64,{b64}{suffix}'
             except Exception:
                 return match.group(0)
         return match.group(0)
 
     # Replaces src="..." as well as "assets/..." in JavaScript configurations
-    html = re.sub(r'(src=["\'])([^"\']+\.(?:jpg|jpeg|png|webp|svg))(["\'])', inline_images, html)
-    html = re.sub(r'([\"\'])(assets/[^"\']+\.(?:jpg|jpeg|png|webp|svg))([\"\'])', inline_images, html)
+    html = re.sub(r'(src=["\'])([^"\']+\.(?:jpg|jpeg|png|webp|svg|docx|doc|pdf))(["\'])', inline_assets, html)
+    html = re.sub(r'([\"\'])(assets/[^"\']+\.(?:jpg|jpeg|png|webp|svg|docx|doc|pdf))([\"\'])', inline_assets, html)
 
     return html
 

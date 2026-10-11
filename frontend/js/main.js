@@ -72,6 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.AchievementsComponent) window.AchievementsComponent.render(data);
   if (window.GoalsComponent) window.GoalsComponent.render(data);
   if (window.ProjectsComponent) window.ProjectsComponent.render(data);
+  if (window.CoaComponent) window.CoaComponent.render(data);
+  if (window.ConverterComponent) window.ConverterComponent.render(data);
   if (window.ContactComponent) window.ContactComponent.render(data);
 
   // 3. Render Footer Data
