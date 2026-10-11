@@ -1,0 +1,13 @@
+{
+  "name": "krishna-verma-portfolio",
+  "version": "1.0.0",
+  "description": "Clean, Modern, and Professional Personal Portfolio for Krishna Verma (BE CSE - General AI)",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "node backend/server.js",
+    "backend:dev": "node --watch backend/server.js"
+  },
+  "keywords": ["portfolio", "developer", "student", "ai", "chandigarh-university"],
+  "author": "Krishna Verma",
+  "license": "MIT"
+}

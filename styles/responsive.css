@@ -1,0 +1,185 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM
+   Mobile, Tablet, Laptop, and Desktop Adaptations
+   ========================================================================== */
+
+/* Laptop & Medium Screens (< 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-badge-group {
+    justify-content: center;
+  }
+
+  .hero-bio {
+    margin-inline: auto;
+  }
+
+  .hero-stats-row {
+    justify-content: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .about-card-profile {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .academics-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .performance-card {
+    position: static;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* Tablets (< 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+    --space-4xl: 4rem;
+    --space-3xl: 3rem;
+  }
+
+  /* Show mobile hamburger, hide desktop nav */
+  .navbar-nav {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .hero-name {
+    font-size: 2.75rem;
+  }
+
+  .profile-avatar-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profile-avatar-border {
+    width: 250px;
+    height: 250px;
+  }
+
+  .floating-hero-card {
+    display: none; /* Hide floating chips on small mobile to avoid overflow */
+  }
+
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .about-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+/* Small Mobile Phones (< 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .hero-headline {
+    font-size: 1.1rem;
+  }
+
+  .profile-avatar-wrapper {
+    width: 230px;
+    height: 230px;
+  }
+
+  .profile-avatar-border {
+    width: 210px;
+    height: 210px;
+  }
+
+  .hero-stats-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .skill-tab-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: var(--fs-xs);
+  }
+
+  .skill-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .toast {
+    right: 1rem;
+    left: 1rem;
+    max-width: none;
+  }
+}
